@@ -7,6 +7,7 @@ const Header = (props) => {
 }
 
 const Content = (props) => {
+
     return (
         <>
              {props.parts.map(parts => <p> {parts.name}  {parts.exercises}</p>)} 
@@ -17,13 +18,14 @@ const Content = (props) => {
 
 const Total = (props) => {
 
-    const sum = (p1, p2, p3) => {
-        return p1 + p2 + p3
-    }
+    const { parts } = props
+    const sum = (p1, p2, p3) => p1 + p2 + p3
+        
+    
     
     return (
         <>
-            <p> Numer of exercises {sum(props.parts[0].exercises, props.parts[1].exercises, props.parts[2].exercises)} </p>
+            <p> Numer of exercises {sum(parts[0].exercises, parts[1].exercises, parts[2].exercises)} </p>
         </>
     )
 }
