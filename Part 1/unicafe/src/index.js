@@ -20,8 +20,6 @@ const Statistics = (props) => {
         return positive / total * 100
     }
     
-    console.log(good)
-    console.log(props.feedbackGiven)
     if(props.feedbackGiven === 0) {
         return (
             <div>
